@@ -1,0 +1,4 @@
+
+contoso.tfplan
+.terraform/
+.terraform.lock.hcl
