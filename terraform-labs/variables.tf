@@ -1,6 +1,15 @@
-variable "prefix" {}
+variable resource_groups {
+   type        = map(string)
+   description = "The resource groups to deploy"
+ }
+
+ variable "prefix" {
+   type        = string
+   description = "A prefix for all resources"
+   default     = "contoso"
+ }
     
- variable "region" {
+variable "region" {
    type        = string
    default     = "North Europe"
    description = "The Azure region to deploy resources"
@@ -10,7 +19,7 @@ variable "prefix" {}
    }
  }
     
- variable "tags" {
+variable "tags" {
    type        = map(any)
    description = "A map of tags"
  }
